@@ -1,0 +1,110 @@
+{{#get "posts" filter="tag:must-read"}}
+    <section class="tc-must-read-style1 p-30">
+        <p class="color-000 text-uppercase mb-20 ltspc-1">
+            <a href="/tag/must-read/"> must read </a>
+            <i class="la la-angle-right ms-1"></i>
+        </p>
+        {{#foreach posts}}
+            {{#if @first}}
+                <div
+                    class="tc-post-grid-default border-1 border-bottom brd-gray pb-30"
+                >
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="img img-cover th-230 inner">
+                                    <img
+                                        src="{{feature_image}}"
+                                        alt="{{title}}"
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="content">
+                                    <h3 class="title mb-15">
+                                        <a
+                                            href="{{url}}"
+                                            class="hover-underline"
+                                        >{{title}}</a>
+                                    </h3>
+                                    <div class="text color-666">
+                                        {{excerpt words="12"}}[...]
+                                    </div>
+                                    <div class="meta-bot lh-1 mt-50">
+                                        <ul class="d-flex">
+                                            <li class="date me-4">
+                                                <i
+                                                    class="la la-calendar me-1"
+                                                ></i>
+                                                <span
+                                                    class="gh-article-meta mb-1"
+                                                >
+                                                    <time
+                                                        datetime="{{date
+                                                            format="YYYY-MM-DD"
+                                                        }}"
+                                                    >
+                                                        {{date
+                                                            format="D MMM YYYY"
+                                                        }}</time>
+                                                    {{!-- <span
+                                                        class="bull"
+                                                    >&bull;</span>
+                                                    {{reading_time}}
+                                                </span> --}}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/if}}
+        {{/foreach}}
+
+        <div class="tc-post-grid-default pt-30">
+            <div class="row">
+                {{#foreach posts from="2" to="4"}}
+                    {{#if @last}}
+                        <div class="col-lg-4">
+                            <div class="item">
+                                <div class="img img-cover th-180 mb-20 inner">
+                                    <img src="{{feature_image}}" alt="" />
+                                </div>
+                                <div class="content">
+                                    <h4 class="title ltspc--1">
+                                        <a
+                                            href="{{url}}"
+                                            class="hover-underline"
+                                        >
+                                            {{title}}
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    {{else}}
+                        <div class="col-lg-4 border-1 border-end brd-gray">
+                            <div class="item">
+                                <div class="img img-cover th-180 mb-20 inner">
+                                    <img src="{{feature_image}}" alt="" />
+                                </div>
+                                <div class="content">
+                                    <h4 class="title ltspc--1">
+                                        <a
+                                            href="{{url}}"
+                                            class="hover-underline"
+                                        >
+                                            {{title}}
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    {{/if}}
+                {{/foreach}}
+            </div>
+        </div>
+    </section>
+{{/get}}

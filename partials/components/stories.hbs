@@ -1,0 +1,30 @@
+<section class="tc-google-stories-style1">
+    <div class="container">
+        <div
+            class="section-content pt-70 pb-70 border-0 border-bottom brd-gray"
+        >
+            <p class="color-000 text-uppercase mb-50 ltspc-1">stories</p>
+            <div class="tc-google-stories-slider1 tc-slider-style1">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper" style="height:auto">
+                        {{#foreach posts}}
+                            <div class="swiper-slide">
+                                <a href="{{url}}" class="story-item">
+                                    <div class="img img-cover">
+                                        <img src="{{feature_image}}" alt="" />
+                                    </div>
+                                    <div class="title fsz-14px color-000 mt-10">
+                                        {{!-- {{title}} --}}
+                                    </div>
+                                </a>
+                            </div>
+                        {{/foreach}}
+                    </div>
+                </div>
+                <!-- arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+</section>

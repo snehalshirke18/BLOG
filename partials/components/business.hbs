@@ -1,0 +1,155 @@
+{{#get "posts" filter="tag:ai-in-bussiness"}}
+    <section class="tc-lifestyle pt-50 pb-50">
+        <div class="container">
+            <p class="color-000 text-uppercase mb-30 ltspc-1">
+                <a href="/tag/ai-in-bussiness/">AI in Bussiness</a>
+                <i class="la la-angle-right ms-1"></i>
+            </p>
+            <div class="content">
+                <div class="row">
+                    {{#foreach posts}}
+                        {{#if @first}}
+                            <div class="col-lg-8 border-end brd-gray border-1">
+                                <div class="tc-post-grid-default">
+                                    <div class="item">
+                                        <div class="img img-cover th-400 inner">
+                                            <img
+                                                src="{{feature_image}}"
+                                                alt="{{title}}"
+                                            />
+                                        </div>
+                                        <div class="content pt-30">
+                                            <h3 class="title ltspc--1 mb-20">
+                                                <a
+                                                    href="{{url}}"
+                                                    class="hover-underline"
+                                                >
+                                                    {{title}}
+                                                </a>
+                                            </h3>
+                                            <div class="text color-666">
+                                                {{excerpt words="20"}}[...]
+                                            </div>
+                                            <div class="meta-bot lh-1 mt-40">
+                                                <ul class="d-flex">
+                                                    <li class="date me-5">
+                                                        <i
+                                                            class="la la-calendar me-2"
+                                                        ></i>
+                                                        <span
+                                                            class="gh-article-meta mb-1"
+                                                        >
+                                                            <time
+                                                                datetime="{{date
+                                                                    format="YYYY-MM-DD"
+                                                                }}"
+                                                            >
+                                                                {{date
+                                                                    format="D MMM YYYY"
+                                                                }}</time>
+                                                            {{!-- <span
+                                                                class="bull"
+                                                            >&bull;</span>
+                                                            {{reading_time}}
+                                                        </span> --}}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {{/if}}
+                    {{/foreach}}
+                    <div class="col-lg-4">
+                        {{#foreach posts from="2" to="5"}}
+                            {{#if @first}}
+                                <div class="tc-post-grid-default">
+                                    <div class="item">
+                                        <div class="img img-cover th-200 inner">
+                                            <img
+                                                src="{{feature_image}}"
+                                                alt="{{title}}"
+                                            />
+                                        </div>
+                                        <div class="content pt-20">
+                                            <h5 class="title ltspc--1 mb-10">
+                                                <a
+                                                    href="{{url}}"
+                                                    class="hover-underline"
+                                                >
+                                                    {{title}}
+                                                </a>
+                                            </h5>
+                                            <div class="text color-666">
+                                                {{excerpt words="12"}}[...]
+                                            </div>
+                                            <div class="meta-bot lh-1 mt-20">
+                                                <ul class="d-flex">
+                                                    <li class="date me-5">
+                                                        <i
+                                                            class="la la-calendar me-2"
+                                                        ></i>
+                                                        <span
+                                                            class="gh-article-meta mb-1"
+                                                        >
+                                                            <time
+                                                                datetime="{{date
+                                                                    format="YYYY-MM-DD"
+                                                                }}"
+                                                            >
+                                                                {{date
+                                                                    format="D MMM YYYY"
+                                                                }}</time>
+                                                            {{!-- <span
+                                                                class="bull"
+                                                            >&bull;</span>
+                                                            {{reading_time}}
+                                                        </span> --}}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {{else}}
+                                <div class="tc-post-list-style2">
+                                    <div class="items">
+                                        <a
+                                            href="{{url}}"
+                                            class="item d-block border-1 border-top border-bottom-0 brd-gray pt-15 mt-15"
+                                        >
+                                            <div
+                                                class="row gx-3 align-items-center"
+                                            >
+                                                <div class="col-4">
+                                                    <div
+                                                        class="img th-50 img-cover"
+                                                    >
+                                                        <img
+                                                            src="{{feature_image}}"
+                                                            alt="{{title}}"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div class="col-8">
+                                                    <div class="content">
+                                                        <h6
+                                                            class="title ltspc--1 hover-underline"
+                                                        >
+                                                            {{title}}
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            {{/if}}
+                        {{/foreach}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{{/get}}

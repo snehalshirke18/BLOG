@@ -1,0 +1,1280 @@
+{{!< default}}
+
+{{#post}}
+
+{{!-- <main class="gh-main">
+
+    <article class="gh-article {{post_class}} container">
+
+    <header class="gh-article-header gh-canvas">
+
+        {{#if primary_tag}}
+                <a class="gh-article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
+        {{/if}}
+        <br>
+
+        <h1 class="gh-article-title is-title">{{title}}</h1>
+
+        {{#if custom_excerpt}}
+        <p class="gh-excerpt">{{excerpt}}</p>
+        {{/if}}
+
+        {{#if feature_image}}
+            <figure class="gh-article-image">
+                <img
+                    srcset="{{img_url feature_image size="s"}} 320w,
+                    {{img_url feature_image size="m"}} 600w,
+                    {{img_url feature_image size="l"}} 960w,
+                    {{img_url feature_image size="xl"}} 1200w,
+                    {{img_url feature_image size="xxl"}} 2000w"
+                    src="{{img_url feature_image size="xl"}}"
+                    alt="{{title}}"
+                >
+                {{#if feature_image_caption}}
+                    <figcaption>{{feature_image_caption}}</figcaption>
+                {{/if}}
+            </figure>
+        {{/if}}
+        <span class="gh-article-meta mb-1">
+            <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
+            <span class="bull">&bull;</span> {{reading_time}}
+        </span>
+    </header>
+
+    <div class="gh-content gh-canvas is-body">
+        {{content}}
+    </div>
+
+</article>
+    {{#if comments}}
+        <div class="gh-comments gh-canvas">
+            {{comments}}
+        </div>
+    {{/if}}
+</main> --}}
+
+
+ <!--Contents-->
+    <main class="gh-main">
+
+        <!-- ====== start tc-main-post-style1 ====== -->
+        <section class="tc-main-post-style1 pb-60">
+            <div class="container">
+                <h4 class=" gh-article-tag color-666">
+                {{#if primary_tag}}
+                <a class="gh-article-tag pt-20 " href="{{primary_tag.url}}">{{primary_tag.name}}</a>
+        {{/if}}
+        </h4>
+                <div class="tc-main-post-title pt-40 pb-40">
+                    <div class="row">
+                        <div class="col-lg-8">
+
+                            
+        <h1 class="gh-article-title is-title">{{title}}</h1>
+        
+
+                            {{!-- <h2 class="title">Manoah dominates, closes on Blue Jays history</h2> --}}
+                            <p class="fsz-16px mt-20 color-666">Your Success Is Our Success</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="meta-nav pt-30 pb-30 border-top border-1 brd-gray">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="author-side color-666 fsz-13px">
+                                <div class="author me-40 d-flex d-lg-inline-flex align-items-center">
+                                    {{!-- <span class="icon-30 rounded-circle overflow-hidden me-10">
+                                    </span> --}}
+                                    
+                                </div>
+                               <span class="gh-article-meta mb-1">
+                                 <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
+                                   
+                                    {{!-- <span class="bull">&bull;</span> {{reading_time}}
+                                       </span> --}}
+
+
+
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-lg-end">
+                            <div class="links-side color-000 fsz-13px">
+                                
+                                 <a href="" id="copyLink" class="me-40"><i class="la la-link me-1"></i> Copy Link</a>
+
+
+<script>
+        document.getElementById('copyLink').addEventListener('click', function() {
+            // Get the current page URL
+            var pageURL = window.location.href;
+
+            // Create a temporary input element
+            var tempInput = document.createElement('input');
+            tempInput.value = pageURL;
+            document.body.appendChild(tempInput);
+
+            // Select the URL
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999); /* For mobile devices */
+
+            // Copy the URL to clipboard
+            document.execCommand('copy');
+
+            // Remove the temporary input
+            document.body.removeChild(tempInput);
+
+            // Alert the user
+            alert('Page URL copied to clipboard: ' + pageURL);
+        });
+</script>
+
+                              
+       <a href="" onclick="bookmarkPage(event)" class="me-40"><i class="la la-bookmark me-1"></i> Bookmark</a>
+
+                            
+       <script>
+        function bookmarkPage() {
+            var pageTitle = document.title;
+            var pageURL = window.location.href;
+
+            if (window.sidebar && window.sidebar.addPanel) { // For Firefox
+                window.sidebar.addPanel(pageTitle, pageURL, '');
+            } else if (window.external && ('AddFavorite' in window.external)) { // For Internet Explorer
+                window.external.AddFavorite(pageURL, pageTitle);
+            } else if (window.opera && window.print) { // For Opera
+                var elem = document.createElement('a');
+                elem.setAttribute('href', pageURL);
+                elem.setAttribute('title', pageTitle);
+                elem.setAttribute('rel', 'sidebar');
+                elem.click();
+            } else { // For other browsers
+                alert("Your browser does not support automatic bookmarking. Please use your browser's bookmark function to bookmark this page.");
+            }
+        }
+    </script>
+
+
+               {{!-- <a href="" id="reportLink"><i class="la la-exclamation-triangle me-1"></i> Report</a> --}}
+
+    {{!-- <div id="reportModal" style="display: none;">
+        <h2>Report Form</h2>
+        <form id="reportForm">
+            <label for="reason">Reason for Report:</label><br>
+            <textarea id="reason" name="reason" rows="4" cols="50" required></textarea><br><br>
+            
+            <label for="email">Your Email (optional):</label><br>
+            <input type="email" id="email" name="email"><br><br>
+            
+            <input type="submit" value="Submit Report">
+        </form>
+    </div> --}}
+
+    <script>
+        document.getElementById('reportLink').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default behavior of the anchor tag
+            document.getElementById('reportModal').style.display = 'block'; // Display the report modal
+        });
+
+        document.getElementById('reportForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Here you can handle the form submission using JavaScript
+            // You can retrieve the values of the reason and email fields and process them accordingly
+            var reason = document.getElementById('reason').value;
+            var email = document.getElementById('email').value;
+
+            // For demonstration purposes, you can log the values to the console
+            console.log("Reason: " + reason);
+            console.log("Email: " + email);
+
+            // You can also submit the form data to a server-side script using AJAX for further processing
+            // Example: You can use fetch() or XMLHttpRequest to send the data to the server
+            // fetch('report.php', {
+            //     method: 'POST',
+            //     body: JSON.stringify({ reason: reason, email: email }),
+            //     headers: {
+            //         'Content-Type': 'application/json'
+            //     }
+            // }).then(response => {
+            //     // Handle the response from the server
+            // }).catch(error => {
+            //     console.error('Error:', error);
+            // });
+
+            // Close the modal after submitting the form
+            document.getElementById('reportModal').style.display = 'none';
+        });
+    </script>                
+                              
+                              
+
+                              
+                              
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tc-main-post-img img-cover mb-50">
+                    {{#if feature_image}}
+                         <figure class="gh-article-image">
+               
+                    <img  srcset="{{img_url feature_image size="s"}} 320w,
+                    {{img_url feature_image size="m"}} 600w,
+                    {{img_url feature_image size="l"}} 960w,
+                    {{img_url feature_image size="xl"}} 1200w,
+                    {{img_url feature_image size="xxl"}} 2000w"
+                    src="{{img_url feature_image size="xl"}}"
+                    alt="{{title}}">
+        {{/if}}
+
+
+
+
+
+
+
+                </div>
+                <div class="tc-main-post-content color-000">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <div class="sharing">
+                                <p class="text-uppercase mb-20 text-capitalize me-20 mb-2 mb-lg-0 ">Share</p>
+                                <div class=" row share-icons ">
+
+                                <a href="" class="share-btn" id="twitter-share-btn">                                
+                                        <i class="la la-twitter color-main  justify-content-center mb-10 border-white p-10"></i> 
+                                </a>
+
+
+                                <a href="" class="share-btn" id="facebook-share-btn">               
+                                            <i class="la la-facebook-f color-main  align-items-center mb-10 p-10 "></i>
+                                </a>
+
+                                <a href="" class="share-btn" id="instagram-share-btn">               
+                                            <i class="la la-instagram color-main  align-items-center mb-10 p-10"></i>
+                                </a>
+
+                                <a href="" class="share-btn" id="linkedin-share-btn">               
+                                            <i class="la la-linkedin color-main  align-items-center mb-10 p-10"></i>
+                                </a>
+
+                               
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-10">
+                             <h4 class="sub-title sm-content-width gh-article-title is-title">{{title}}
+                            </h4> 
+
+
+
+
+
+
+
+                            
+
+                            {{!-- <p class="info-text sm-content-width mt-40 ">
+                                 {{content}}
+                            </p> --}}
+                            <h6 class="sub-title sm-content-width mt-30">
+                                {{!-- The first, and most obvious, is a noise when you apply the brake pedal. This could be anything from a grinding sound to a high-pitched screech --}}
+                            </h6>
+                            <div class="info-text-img mt-30">
+                                <div class="row">
+                                    <div class="col-lg-7">
+                                        <p class="info-text">
+
+
+                                 {{content}}
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-5">
+                                       {{#get "posts" filter="tag:tagline"}}
+
+                                         {{#foreach posts }}
+
+                                        <div class="img img-cover th-280 mt-15">
+                                                 <img src="{{feature_image}}" alt="{{title}}"/>
+                                       
+                                       
+
+                                        {{/foreach}}
+                                        {{/get}}
+                                       
+                                        </div>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-10">
+                            {{!-- <div class="quote-message-content mt-50">
+                                <div class="row">
+                                    <div class="col-lg-7">
+                                        <div class="quote-message">
+                                            <div class="icon">
+                                                <img src="assets/img/quote.png" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <h3>Gross-out humour meets Jungian psychology as the book moves.</h3>
+                                                <p class="color-999 mt-20"> <strong class="color-000"> M Moussa </strong>  //  Envato Author</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <div class="content-info">
+                                            <h5 class="sub-title sm-content-width mb-20">
+                                                Sample Heading 
+                                            </h5>
+                                            <p class="info-text">
+                                                Sub Heading “The Horseman was both the clue and the final reveal. He was keystone in the arch, the signature at the bottom of every page. As Homer Simpson once observed of beer, the Horseman was the cause of and solution to all of life’s problems,” explains McLaren. It could only be a matter of time before someone in this family of writers (the mother
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-10 offset-lg-2">
+                                        <p class="info-text ps-30">
+                                            of author and uncle are both journalists). It explained a tortured romance that saw Cessie lurch from one emotional crisis to another throughout McLaren’s adolescence
+                                        </p>
+                                    </div>
+                                </div> --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====== end tc-main-post-style ====== -->
+
+        {{!-- <!-- ====== start banner18 ====== -->
+        <section class="banner18">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="content border-1 border-top border-bottom brd-gray pt-50 pb-50">
+                            <a href="#" class="d-block img-cover">
+                                <img src="assets/img/banner18.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====== end banner18 ====== --> --}}
+
+        <!-- ====== start video content ====== -->
+        <section class="tc-main-post-style1 pt-60 pb-60">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="tc-main-post-content">
+                            {{!-- <h4 class="sub-title mb-40">
+                                3 Reasons to investing at this moment 
+                            </h4>
+                            <p class="info-text">
+                                The first and most obvious, is a noise when <span class="fst-italic">“you apply the brake pedal”</span>. This could be anything from a grinding sound to a high-pitched screech
+                            </p>
+                            <ul class="info-text mt-40 mb-40">
+                                <li> Welsh novelist Sarah Waters sums it up eloquently </li>
+                                <li>In their classic book, Creativity in Business, based on a popular course tvhey co-taught</li>
+                                <li>Novelist and screenwriter Steven Pressfield</li>
+                            </ul>
+                            <p class="info-text">
+                                That immediately brought to mind one of <a href="#" class="text-decoration-underline text-cyan">my fondest</a> memories, involving my daughter
+                            </p>
+                            <div class="video-content mt-60">
+                                 <video width="100%" height="100%" controls>
+                                    <source src="assets/img/video.mp4" type="video/mp4">
+                                </video> 
+                            </div>
+                            <p class="info-text mt-50">
+                                Unlike many others, the Guardian has no shareholders and no billionaire owner. Just the determination and passion to deliver high-impact global reporting, always free from commercial or political influence.
+                            </p> --}}
+
+                           {{#get "posts" filter="tag:video"}}
+
+                            <div class="tc-subscribe-style9 mt-50">
+                                <div class="row justify-content-around align-items-center">
+                                <video width="100%" height="100%" controls>
+                                 <source src="{{@site.url}}/content/media/2024/02/ai.mp4" type="video/mp4">
+                                </video>
+                                </div>
+                            </div>
+{{/get}}
+
+                            
+                            {{#get "posts" filter="tag:tagline"}}
+
+                     {{#foreach posts}}
+
+                            <p class="info-text mt-50">
+                            {{title}}
+
+                                {{!-- Our should never complain, complaining is a weak emotion, you gotlife, we breathing, we blessed. Surround yourself with angels. They never said winning was easy --}}
+                            </p>
+
+                            {{/foreach}}
+
+                            {{/get}}
+                        </div>
+                        <div class="btm-share-post mt-50">
+
+
+                            
+                            <div class="row items">
+                                <div class="col-lg-6">
+                                     <div class="btm-tags mb-4 mb-lg-0">
+                                          <p class="text-capitalize me-30 mb-20 mb-xl-2">Share</p>
+
+                                    </div> 
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="btm-sharing  align-items-lg-center justify-content-center">
+                                        <div class="share-icons ">
+                                <div class="social-share">
+                                <a href="https://twitter.com/intent/tweet?url={{url absolute="true"}}&text={{title}}" target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter" class="me-15">
+                                        <i class="la la-twitter color-main  justify-content-center mb-20 border-white p-10"></i> 
+                                 </a>
+
+                                 <a href="https://www.facebook.com/sharer/sharer.php?url={{url absolute="true"}}&quote={{title}}" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook"class="me-15">
+                                    <i class="la la-facebook-f color-main justify-content-center mb-20 border-white p-10"></i>
+                                  </a>
+
+                                  <a href="https://www.instagram.com/share?url={{url absolute="true"}}&utm_source=instagram_share_button" target="_blank" rel="noopener noreferrer" aria-label="Share on Instagram"class="me-15">
+                                     <i class="la la-instagram color-main  justify-content-center mb-20 border-white p-10"></i> 
+                                 </a>
+
+    
+
+
+
+                           
+
+
+
+
+
+    
+</div>
+
+
+<script>
+
+
+   document.getElementById('facebook-share-btn').onclick = function() {
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank');
+};
+
+
+    document.getElementById('twitter-share-btn').onclick = function() {
+        window.open('https://twitter.com/share?url=' + encodeURIComponent(window.location.href), '_blank');
+    };
+
+     document.getElementById('instagram-share-btn').onclick = function() {
+        window.open('https://instagram.com/share?url=' + encodeURIComponent(window.location.href), '_blank');
+    };
+
+    document.getElementById('linkedin-share-btn').onclick = function() {
+        window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(window.location.href), '_blank');
+    };
+
+     
+</script>
+
+
+
+
+
+
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====== end video content ====== -->
+
+
+        <!-- ====== start next prev post slider ====== -->
+        <section class="tc-next-prev-post mb-60">
+            <div class="container">
+                <div class="row justify-content-center ">
+                    <div class="col-lg-8 ">
+                        <div class="tc-next-prev-post-slider ">
+                            <div class="swiper-container ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                         {{#next_post}}
+                                        <a href="{{url}}" class="active">
+                                            <p class="color-main fsz-12px text-uppercase">previous</p>
+                                            <span class="text text-uppercase">
+                                            <h6 class="gh-article-title is-title">{{title}}</h6>
+                                            </span>
+                                        </a>
+                                           {{/next_post}}
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                         {{#prev_post}}
+                                           <a href="{{url}}" class="active">
+                                            <p class="color-main fsz-12px text-uppercase">next</p>
+                                            <span class="text text-uppercase">
+                                            <h6 class="gh-article-title is-title">{{title}}</h6>
+                                            </span>
+                                            </a>
+                                         {{/prev_post}}
+                                   </div>
+                                  </div>
+</div>
+
+                          
+                        </div>
+                <div>
+                    {{#next_post}}
+
+                    <a href="{{url}}" class="active"> 
+                        <div class="swiper-button-prev color-main justify-content-center">      
+                        </div>
+                    </a>
+                    {{/next_post}}
+                </div>
+
+                <div>
+                  {{#prev_post}}
+                  <a href="{{url}}" class="active">
+
+                    <div class="swiper-button-next color-main justify-content-center">
+                     </div>
+                   </a>
+                   {{/prev_post}}
+ 
+                </div>    
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====== end next prev post slider ====== -->
+
+
+        <!-- ====== start author info ====== -->
+        <section class="tc-author-info-style1 pb-60">
+            <div class="container">
+                <div class="tc-author-card border-1 border-top brd-gray">
+                    <div class="content mt-50 p-50 d-block d-lg-flex bg-gray1">
+
+                                  {{#get "posts" filter="tag:google-web-stories"}}
+                                    {{#foreach posts from="1" to="1"}}
+
+                        <div class="img img-cover icon-85 rounded-circle overflow-hidden flex-shrink-0 me-30">
+ <img
+                                                        src="{{feature_image}}"
+                                                        alt="{{title}}"
+                                                    />
+
+
+
+                        </div>
+                        <div class="info">
+                            <h5 class="title fsz-24px fw-bold">{{title}}</h5>
+                            <div class="text fsz-15px color-666 mt-20">
+                            </div>
+                            <div class="social-links mt-20 fsz-19px">
+                            <a href="https://twitter.com/intent/tweet?url={{url absolute="true"}}&text={{title}}" target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter" class="me-15">
+                                        <i class="la la-twitter color-main  justify-content-center mb-20 border-white p-10"></i> 
+                            </a>
+
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">
+
+                            <i class="la la-facebook-f color-main  justify-content-center mb-20 border-white p-10"></i> 
+                              </a>
+                            <a href="https://www.instagram.com/share?url={{url absolute="true"}}&utm_source=instagram_share_button" target="_blank" rel="noopener noreferrer" aria-label="Share on Instagram">
+                                 <i class="la la-instagram color-main  justify-content-center mb-20 border-white p-10"></i> 
+                            </a>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    {{/foreach}}
+                    {{/get}}
+                </div>
+            </div>
+        </section>
+        <!-- ====== end author info ====== -->
+
+
+        <!-- ====== start another posts ====== -->
+        <section class="another-news">
+            <div class="container">
+                <div class="content pt-50 pb-50 border-1 border-top border-dark">
+                    <div class="row">
+                         <div class="col-lg-4 mb-4">
+                    {{#get "posts" filter="tag:must-read"}}
+                        <p class="color-000 text-uppercase mb-30 ltspc-1">
+                            <a href="/">Must Read</a>
+                            <i class="la la-angle-right ms-1"></i>
+                        </p>
+                        <div class="row">
+                            <div class="col-12 brd-gray">
+                                <div class="tc-post-grid-default">
+                                    {{#foreach posts}}
+                                        {{#if @first}}
+                                            <div class="item">
+                                                <div
+                                                    class="img inner img-cover th-250"
+                                                >
+                                                    <img
+                                                        src="{{feature_image}}"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <div class="content pt-20">
+
+                                                    <h4
+                                                        class="title ltspc--1 mb-10"
+                                                    >
+                                                        <a
+                                                            href="{{url}}"
+                                                            class="hover-underline"
+                                                        >
+                                                            {{title}}
+                                                        </a>
+                                                    </h4>
+                                                    <div class="text color-666">
+                                                        {{excerpt
+                                                            words="12"
+                                                        }}
+                                                    </div>
+                                                    <div
+                                                        class="meta-bot lh-1 mt-20"
+                                                    >
+                                                        <ul class="d-flex">
+                                                            <li
+                                                                class="date me-5"
+                                                            >
+                                                                <a
+                                                                    href="{{url}}"
+                                                                ><i
+                                                                        class="la la-calendar me-2"
+                                                                    ></i>
+                                                                    <span
+                                                                        class="gh-article-meta mb-1"
+                                                                    >
+                                                                        <time
+                                                                            datetime="{{date
+                                                                                format="YYYY-MM-DD"
+                                                                            }}"
+                                                                        >
+                                                                            {{date
+                                                                                format="D MMM YYYY"
+                                                                            }}</time>
+                                                                        {{!-- <span
+                                                                            class="bull"
+                                                                        >&bull;</span>
+                                                                        {{reading_time}}
+                                                                    </span> --}}
+                                                                </a>
+                                                            </li>
+                                                            <li class="comment">
+
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {{/if}}
+                                    {{/foreach}}
+                                </div>
+                                <div class="tc-post-list-style2">
+                                    <div class="items">
+                                        {{#foreach posts from="2" to="3"}}
+
+                                            <a
+                                                href="{{url}}"
+                                                class="item d-block border-1 border-top border-bottom-0 brd-gray pt-15 mt-15 brd-gray"
+                                            >
+                                                <div
+                                                    class="row gx-3 align-items-center"
+                                                >
+
+                                                    <div class="col-4">
+                                                        <div
+                                                            class="img th-70 img-cover inner"
+                                                        >
+                                                            <img
+                                                                src="{{feature_image}}"
+                                                                alt=""
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <div class="content">
+                                                            <h5
+                                                                class="title ltspc--1 hover-underline"
+                                                            >
+                                                                {{title}}
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+
+                                        {{/foreach}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {{/get}}
+                </div>
+
+
+
+
+                        <div class="col-lg-4 mb-5">
+                    {{#get "posts" filter="tag:fintech"}}
+                        <p class="color-000 text-uppercase mb-30 ltspc-1">
+                            <a href="/">Fintech</a>
+                            <i class="la la-angle-right ms-1"></i>
+                        </p>
+                        <div class="row">
+                            <div class="col-12 brd-gray">
+                                <div class="tc-post-grid-default">
+                                    {{#foreach posts}}
+                                        {{#if @first}}
+                                            <div class="item">
+                                                <div
+                                                    class="img img-cover th-250 inner"
+                                                >
+                                                    <img
+                                                        src="{{feature_image}}"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <div class="content pt-20">
+
+                                                    <h4
+                                                        class="title ltspc--1 mb-10"
+                                                    >
+                                                        <a
+                                                            href="{{url}}"
+                                                            class="hover-underline"
+                                                        >
+                                                            {{title}}
+                                                        </a>
+                                                    </h4>
+                                                    <div class="text color-666">
+                                                        {{excerpt
+                                                            words="12"
+                                                        }}[...]
+                                                    </div>
+                                                    <div
+                                                        class="meta-bot lh-1 mt-20"
+                                                    >
+                                                        <ul class="d-flex">
+                                                            <li
+                                                                class="date me-5"
+                                                            >
+                                                                <a
+                                                                    href="{{url}}"
+                                                                ><i
+                                                                        class="la la-calendar me-2"
+                                                                    ></i>
+                                                                    <span
+                                                                        class="gh-article-meta mb-1"
+                                                                    >
+                                                                        <time
+                                                                            datetime="{{date
+                                                                                format="YYYY-MM-DD"
+                                                                            }}"
+                                                                        >
+                                                                            {{date
+                                                                                format="D MMM YYYY"
+                                                                            }}</time>
+                                                                        {{!-- <span
+                                                                            class="bull"
+                                                                        >&bull;</span>
+                                                                        {{reading_time}}
+                                                                    </span> --}}
+                                                                </a>
+                                                            </li>
+                                                            {{!-- <li class="comment">
+                                                            </li> --}}
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {{/if}}
+                                    {{/foreach}}
+                                </div>
+                                <div class="tc-post-list-style2">
+                                    <div class="items">
+                                        {{#foreach posts from="2" to="3"}}
+
+                                            <a
+                                                href="{{url}}"
+                                                class="item d-block border-1 border-top border-bottom-0 brd-gray pt-15 mt-15 brd-gray"
+                                            >
+                                                <div
+                                                    class="row gx-3 align-items-center"
+                                                >
+
+                                                    <div class="col-4">
+                                                        <div
+                                                            class="img th-70 img-cover inner"
+                                                        >
+                                                            <img
+                                                                src="{{feature_image}}"
+                                                                alt=""
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <div class="content">
+                                                            <h5
+                                                                class="title ltspc--1 hover-underline"
+                                                            >
+                                                                {{title}}
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+
+                                        {{/foreach}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {{/get}}
+                </div>
+                        <div class="col-lg-4">
+                               {{#get "posts" filter="tag:healthcare"}}
+                        <p class="color-000 text-uppercase mb-30 ltspc-1">
+                            <a href="/">Healthcare</a>
+                            <i class="la la-angle-right ms-1"></i>
+                        </p>
+                        <div class="row">
+                            <div class="col-12 brd-gray">
+                                <div class="tc-post-grid-default">
+                                    {{#foreach posts}}
+                                        {{#if @first}}
+                                            <div class="item">
+                                                <div
+                                                    class="img img-cover th-250 inner"
+                                                >
+                                                    <img
+                                                        src="{{feature_image}}"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <div class="content pt-20">
+
+                                                    <h4
+                                                        class="title ltspc--1 mb-10"
+                                                    >
+                                                        <a
+                                                            href="{{url}}"
+                                                            class="hover-underline"
+                                                        >
+                                                            {{title}}
+                                                        </a>
+                                                    </h4>
+                                                    <div class="text color-666">
+                                                        {{excerpt
+                                                            words="12"
+                                                        }}[...]
+                                                    </div>
+                                                    <div
+                                                        class="meta-bot lh-1 mt-20"
+                                                    >
+                                                        <ul class="d-flex">
+                                                            <li
+                                                                class="date me-5"
+                                                            >
+                                                                <a
+                                                                    href="{{url}}"
+                                                                ><i
+                                                                        class="la la-calendar me-2"
+                                                                    ></i>
+                                                                    <span
+                                                                        class="gh-article-meta mb-1"
+                                                                    >
+                                                                        <time
+                                                                            datetime="{{date
+                                                                                format="YYYY-MM-DD"
+                                                                            }}"
+                                                                        >
+                                                                            {{date
+                                                                                format="D MMM YYYY"
+                                                                            }}</time>
+                                                                        {{!-- <span
+                                                                            class="bull"
+                                                                        >&bull;</span>
+                                                                        {{reading_time}}
+                                                                    </span> --}}
+                                                                </a>
+                                                            </li>
+                                                            {{!-- <li class="comment">
+                                                            </li> --}}
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {{/if}}
+                                    {{/foreach}}
+                                </div>
+                                <div class="tc-post-list-style2">
+                                    <div class="items">
+                                        {{#foreach posts from="2" to="3"}}
+
+                                            <a
+                                                href="{{url}}"
+                                                class="item d-block border-1 border-top border-bottom-0 brd-gray pt-15 mt-15 brd-gray"
+                                            >
+                                                <div
+                                                    class="row gx-3 align-items-center"
+                                                >
+
+                                                    <div class="col-4">
+                                                        <div
+                                                            class="img th-70 img-cover inner"
+                                                        >
+                                                            <img
+                                                                src="{{feature_image}}"
+                                                                alt=""
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <div class="content">
+                                                            <h5
+                                                                class="title ltspc--1 hover-underline"
+                                                            >
+                                                                {{title}}
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+
+                                        {{/foreach}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {{/get}}
+                </div>
+               
+
+
+
+                </div>
+            </div>
+        </section>
+        <!-- ====== start another posts ====== -->
+
+
+        <!-- ====== start comments ====== -->
+        <section class="tc-single-post-comments">
+            <div class="container">
+                <div class="comments-content pt-50 pb-50 border-1 border-top border-dark">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="content">
+                                <div class="comments-filter">
+                                    <div class="row align-items-center">
+                                        <div class="col-4">
+                                            {{!-- <p class="text-uppercase"> comments</p> --}}
+                                        </div>
+                                        <div class="col-8 text-end">
+                                            <div class="from-group">
+                                                {{!-- <label for="">Sort by : </label> --}}
+                                                {{!-- <select name="" id="" class="form-select">
+                                                    <option value="">Most liked</option>
+                                                    <option value="">Most views</option>
+                                                    <option value="">Most rated</option>
+                                                </select> --}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="comments-cards">
+
+                                    {{!-- <div class="comment-replay-cont border-bottom border-1 brd-gray pb-40 pt-40">
+                                        <div class="d-flex comment-cont">
+                                            <div class="icon-60 rounded-circle img-cover overflow-hidden me-3 flex-shrink-0">
+                                                <img src="assets/img/colums/1.png" alt="">
+                                            </div>
+                                            <div class="inf w-100">
+                                                <div class="title d-flex justify-content-between">
+                                                    <h6 class="fw-bold fsz-14px">David Bowie</h6>
+                                                    <span class="time fsz-12px text-uppercase color-999">
+                                                        3 hours ago
+                                                    </span>
+                                                </div>
+                                                <div class="text color-666 fsz-12px mt-10">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Atume nusaate staman utra phone limo sumeria                                            
+                                                </div>
+                                                <a href="#" class="butn border border-1 mt-20 py-2 px-3">
+                                                    <span class="fsz-11px"> replay </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex comment-replay ps-5 mt-30 ms-4">
+                                            <div class="icon-40 rounded-circle img-cover overflow-hidden me-3 flex-shrink-0">
+                                                <img src="assets/img/colums/2.png" alt="">
+                                            </div>
+                                            <div class="inf w-100">
+                                                <div class="title d-flex justify-content-between">
+                                                    <h6 class="fw-bold fsz-14px">Logan Cee</h6>
+                                                    <span class="time fsz-12px text-uppercase color-999">
+                                                        2 dayes ago
+                                                    </span>
+                                                </div>
+                                                <div class="text color-666 fsz-12px mt-10">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Atume nusaate staman utra phone limo sumeria                                            
+                                                </div>
+                                                <a href="#" class="butn border border-1 mt-20 py-2 px-3">
+                                                    <span class="fsz-11px"> replay </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comment-replay-cont pb-40 pt-40 border-bottom border-1 brd-gray">
+                                        <div class="d-flex comment-cont">
+                                            <div class="icon-60 rounded-circle img-cover overflow-hidden me-3 flex-shrink-0">
+                                                <img src="assets/img/colums/3.png" alt="">
+                                            </div>
+                                            <div class="inf w-100">
+                                                <div class="title d-flex justify-content-between">
+                                                    <h6 class="fw-bold fsz-14px">Luis Diaz</h6>
+                                                    <span class="time fsz-12px text-uppercase color-999">
+                                                        December 25, 2022
+                                                    </span>
+                                                </div>
+                                                <div class="text color-000 fsz-12px mt-10">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt                                             
+                                                </div>
+                                                <a href="#" class="butn border border-1 mt-20 py-2 px-3">
+                                                    <span class="fsz-11px"> replay </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div> --}}
+                                </div>
+                                <form class="comment-form d-block pt-30">
+                                    <p class="text-uppercase mb-30">Leave A Comment</p>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group mb-30">
+                                                <textarea class="form-control rounded-0 fsz-12px p-3" rows="4" maxlength="250" name="comment"  placeholder="Enter your comment (max 250 words)"></textarea>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group mb-4 mb-lg-0">
+                                                <input type="text" class="form-control fsz-12px rounded-0 p-3" maxlength="20" name="name" placeholder="Your Name *">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control fsz-12px rounded-0 p-3" name="email" placeholder="Your Email *">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="form-check mt-20">
+                                                <input class="form-check-input" name="checkbox" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label fsz-12px" for="flexCheckDefault">
+                                                    Save my name & email in this browser for next time I comment
+                                                </label>
+                                              </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn bg-main text-white rounded-0 mt-40">
+                                                <span class="fsz-11px">Submit Comment </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====== end comments ====== -->
+
+
+        <!-- ====== start modals ====== -->
+{{!-- 
+        <div class="offcanvas offcanvas-start sidebar-popup-style1" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <div class="logo">
+                    <img src="assets/img/logo_home1.png" alt="" class="dark-none">
+                    <img src="assets/img/logo_home1_lt.png" alt="" class="light-none">
+                </div>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body mt-4">
+                <h6 class="color-000 text-uppercase mb-15 ltspc-1"> about us <i class="la la-angle-right ms-1"></i> </h6>
+                <div class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem optio tempora quia iure quae. Soluta corporis quidem aperiam amet nihil.
+                </div>
+
+                <div class="sidebar-categories mt-40">
+                    <h6 class="color-000 text-uppercase mb-30 ltspc-1"> categories <i class="la la-angle-right ms-1"></i> </h6>
+                    <a href="#" class="cat-card">
+                        <div class="img img-cover">
+                            <img src="assets/img/bussines/1.png" alt="">
+                        </div>
+                        <div class="info">
+                            <h5>bussines</h5>
+                            <span class="num">12</span>
+                        </div>
+                    </a>
+                    <a href="#" class="cat-card">
+                        <div class="img img-cover">
+                            <img src="assets/img/trend/3.png" alt="">
+                        </div>
+                        <div class="info">
+                            <h5>technology</h5>
+                            <span class="num">14</span>
+                        </div>
+                    </a>
+                    <a href="#" class="cat-card">
+                        <div class="img img-cover">
+                            <img src="assets/img/must_read/3.png" alt="">
+                        </div>
+                        <div class="info">
+                            <h5>culture</h5>
+                            <span class="num">20</span>
+                        </div>
+                    </a>
+                    <a href="#" class="cat-card">
+                        <div class="img img-cover">
+                            <img src="assets/img/videos/1.png" alt="">
+                        </div>
+                        <div class="info">
+                            <h5>videos</h5>
+                            <span class="num">14</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="sidebar-contact-info mt-50">
+                    <h6 class="color-000 text-uppercase mb-20 ltspc-1"> Contact & follow <i class="la la-angle-right ms-1"></i> </h6>
+                    <ul class="m-0">
+                        <li class="mb-3">
+                            <i class="las la-map-marker me-2 color-main fs-5"></i>
+                            <a href="#">streat name 12, hollywood City, USA</a>
+                        </li>
+                        <li class="mb-3">
+                            <i class="las la-envelope me-2 color-main fs-5"></i>
+                            <a href="#">Newzin@gmail.com</a>
+                        </li>
+                        <li class="mb-3">
+                            <i class="las la-phone-volume me-2 color-main fs-5"></i>
+                            <a href="#">+12 123 456 789</a>
+                        </li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#">
+                            <i class="la la-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="la la-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="la la-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="la la-youtube"></i>
+                        </a>
+                        <a href="#">
+                            <i class="la la-spotify"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div> --}}
+        <!-- ====== end modals ====== -->
+
+    </main>
+    <!--End-Contents-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   {{!-- <div class="pagination style-1 color-main justify-content-center mt-60 mb-50">
+                                     {{#next_post}}
+                                <a href="{{url}}" class="active">
+                             <span class="text text-uppercase"><i class="la la-angle-left">
+
+                             </i>    Previous </i></span>
+
+                                </a>
+                                {{/next_post}}
+                                     &nbsp;&nbsp;
+
+                                </a>
+                                </a>
+                              {{#prev_post}}
+                                <a href="{{url}}" class="active">
+                                    <span class="text text-uppercase">next <i class="la la-angle-right"></i> </span>
+                                </a>
+                             {{/prev_post}}
+
+                            </div>
+
+
+
+      
+            
+
+
+
+        </div>
+    </div> --}}
+
+{{/post}}

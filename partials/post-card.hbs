@@ -1,0 +1,36 @@
+{{!--Re-usable card for linking to posts--}}
+
+<article class="gh-card {{post_class}} container">
+    <div class="shadow mt-4 mb-4 tc-post-grid-default">
+        <div class="gh-card-link">
+            {{#if feature_image}}
+                <figure class="gh-card-image inner">
+                <img
+                srcset="
+                        {{img_url feature_image size="xs" format="webp"}} 160w,
+                        {{img_url feature_image size="s" format="webp"}} 320w,
+                        {{img_url feature_image size="m" format="webp"}} 600w,
+                        {{img_url feature_image size="l" format="webp"}} 960w,
+                        {{img_url feature_image size="xl" format="webp"}} 1200w,
+                        {{img_url feature_image size="xxl" format="webp"}} 2000w"
+                    sizes="{{#if imageSizes}}{{imageSizes}}{{else}}320px{{/if}}"
+                    src="{{img_url feature_image size="m"}}"
+                    alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                    {{#if lazyLoad}}loading="lazy"{{/if}}
+                >
+                </figure>
+            {{/if}}
+            <div class="gh-card-wrapper ps-4 p-3">
+                    {{#if primary_tag}}
+                        <p class="gh-card-tag">{{primary_tag.name}}</p>
+                    {{/if}}
+                    <a href="{{url}}"><h3 class="gh-card-title is-title hover-main">{{title}}</h3></a><br>
+                <span class="gh-card-meta fw-light">
+                    <p class="fs-6">
+                    {{reading_time}}
+                    </p>
+                </span>
+            </div>
+        </div>
+    </div>
+</article>

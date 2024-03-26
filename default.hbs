@@ -1,0 +1,132 @@
+<html lang="{{@site.locale}}">
+
+    <head>
+
+        <!-- Metas -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+        <!-- Title  -->
+        <title> {{@site.title}} </title>
+
+        <!-- bootstrap 5 -->
+        <link rel="stylesheet" href="{{asset 'css/lib/bootstrap.min.css'}}" />
+
+        <!-- font family -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- ionicons icons  -->
+        <link rel="stylesheet" href="{{asset 'css/lib/ionicons.css'}}" />
+        <!-- line-awesome icons  -->
+        <link rel="stylesheet" href="{{asset 'css/lib/line-awesome.css'}}" />
+        <!-- animate css  -->
+        <link rel="stylesheet" href="{{asset 'css/lib/animate.css'}}" />
+        <!-- fancybox popup  -->
+        <link rel="stylesheet" href="{{asset 'css/lib/jquery.fancybox.css'}}" />
+        <!-- lity popup  -->
+        <link rel="stylesheet" href="{{asset 'css/lib/lity.css'}}" />
+        <!-- swiper slider  -->
+        <link rel="stylesheet" href="{{asset 'css/lib/swiper.min.css'}}" />
+
+        <!-- ====== main style ====== -->
+        <link rel="stylesheet" href="{{asset 'css/style.css'}}" />
+
+        {{ghost_head}}
+
+    </head>
+
+    <body class="home-style1">
+
+        <!-- ====== start loading page ====== -->
+        <div class="loading-page style1">
+            <div class="lad-cont">
+                <h2 class="loading loading01">
+                    <span>D</span>
+                    <span>I</span>
+                    <span>G</span>
+                    <span>I</span>
+                    <span>T</span>
+                    <span>A</span>
+                    <span>L  </span>
+&nbsp;&nbsp;
+                    <span>A</span>
+                    <span>I</span>
+&nbsp;&nbsp;
+                    <span>J</span>
+                    <span>O</span>
+                    <span>U</span>
+                    <span>R </span>
+                    <span>N</span>
+                    <span>A</span>
+                    <span>L</span>
+
+                </h2>
+                <small class="loading loading01">
+                    <span>l</span>
+                    <span>o</span>
+                    <span>a</span>
+                    <span>d</span>
+                    <span>i</span>
+                    <span>n</span>
+                    <span>g</span>
+                    <span>.</span>
+                    <span>.</span>
+                    <span>.</span>
+                </small>
+            </div>
+        </div>
+        <!-- ====== end loading page ====== -->
+
+        <main class="gh-main">
+
+            {{> "components/navigation"}}
+
+
+            {{{body}}}
+            {{! All content gets inserted here, index.hbs, post.hbs, etc }}
+
+
+            {{> "components/footer"}}
+            
+
+        </main>
+
+        {{!--<footer class="gh-foot">
+            <div class="gh-container">
+                <div class="gh-foot-menu">
+                    {{navigation type="secondary"}}
+                </div>
+                <div class="gh-foot-meta">
+                    Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                </div>
+            </div>
+        </footer>
+
+    </div> --}}
+        {{! <foot>
+
+        {{! Outputs important scripts - should always be included before closing body tag }}
+        <script src="{{asset 'js/lib/jquery-3.0.0.min.js'}}"></script>
+        <script src="{{asset 'js/lib/jquery-migrate-3.0.0.min.js'}}"></script>
+        <script src="{{asset 'js/lib/bootstrap.bundle.min.js'}}"></script>
+        <script src="{{asset 'js/lib/wow.min.js'}}"></script>
+        <script src="{{asset 'js/lib/jquery.fancybox.js'}}"></script>
+        <script src="{{asset 'js/lib/lity.js'}}"></script>
+        <script src="{{asset 'js/lib/swiper.min.js'}}"></script>
+        <script src="{{asset 'js/lib/jquery.waypoints.min.js'}}"></script>
+        <script src="{{asset 'js/lib/jquery.counterup.js'}}"></script>
+        <script src="assets/js/lib/pace.js"></script> 
+        <script src="{{asset 'js/lib/back-to-top.js'}}"></script>
+        <script src="{{asset 'js/lib/parallaxie.js'}}"></script>
+        <script src="{{asset 'js/main.js'}}"></script>
+        <script src="{{asset 'js/lib/weather-script.js'}}"></script>
+        <script src="{{asset 'js/lib/cryptoDisplay.js'}}"></script>
+        <script src="{{asset 'js/lib/trending_twitter.js'}}"></script>
+        {{ghost_foot}}
+    </body>
+
+</html>

@@ -1,0 +1,34 @@
+{{! <div class="tc-post-list-style1">
+    <div class="tc-post-title-style1">
+        <a href="#"> Trending AI Tags </a>
+    </div>
+    <div class="items" id="trendContainer">
+        <!-- Twitter AI trends will be dynamically added here -->
+    </div>
+</div> }}
+
+<div class="tc-post-list-style1">
+    <div class="tc-post-title-style1">
+        <a href=""> trending posts </a>
+    </div>
+    <div class="items">
+        {{#foreach posts limit="3"}}
+            <a href="{{url}}" class="item hover-main">
+                <h2 class="num">
+                    {{@number}}
+                </h2>
+                <div class="content">
+                    <span class="fsz-12px color-999 text-uppercase mb-2">
+                        {{primary_tag.name}}
+                    </span>
+                    <h6 class="title">{{title}}</h6>
+                </div>
+            </a>
+        {{/foreach}}
+        <a href="#" class="fsz-13px color-999 pt-30 pb-30">
+            See all posts
+            <i class="la la-angle-right"></i>
+        </a>
+
+    </div>
+</div>

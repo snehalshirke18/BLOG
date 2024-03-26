@@ -1,0 +1,361 @@
+<section class="another-news pt-50 pb-50 border-1 border-top brd-gray">
+    <div class="container">
+        <div class="content">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    {{#get "posts" filter="tag:automobile"}}
+                        <p class="color-000 text-uppercase mb-30 ltspc-1">
+                            <a href="/tag/automobile/">Automobile</a>
+                            <i class="la la-angle-right ms-1"></i>
+                        </p>
+                        <div class="row">
+                            <div class="col-12 brd-gray">
+                                <div class="tc-post-grid-default">
+                                    {{#foreach posts}}
+                                        {{#if @first}}
+                                            <div class="item">
+                                                <div
+                                                    class="img inner img-cover th-250"
+                                                >
+                                                    <img
+                                                        src="{{feature_image}}"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <div class="content pt-20">
+
+                                                    <h4
+                                                        class="title ltspc--1 mb-10"
+                                                    >
+                                                        <a
+                                                            href="{{url}}"
+                                                            class="hover-underline"
+                                                        >
+                                                            {{title}}
+                                                        </a>
+                                                    </h4>
+                                                    <div class="text color-666">
+                                                        {{excerpt words="12"}}
+                                                    </div>
+                                                    <div
+                                                        class="meta-bot lh-1 mt-20"
+                                                    >
+                                                        <ul class="d-flex">
+                                                            <li
+                                                                class="date me-5"
+                                                            >
+                                                                <a
+                                                                    href="{{url}}"
+                                                                ><i
+                                                                        class="la la-calendar me-2"
+                                                                    ></i>
+                                                                    <span
+                                                                        class="gh-article-meta mb-1"
+                                                                    >
+                                                                        <time
+                                                                            datetime="{{date
+                                                                                format="YYYY-MM-DD"
+                                                                            }}"
+                                                                        >
+                                                                            {{date
+                                                                                format="D MMM YYYY"
+                                                                            }}</time>
+                                                                        {{!-- <span
+                                                                            class="bull"
+                                                                        >&bull;</span>
+                                                                        {{reading_time}}
+                                                                    </span> --}}
+                                                                </a>
+                                                            </li>
+                                                            <li class="comment">
+
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {{/if}}
+                                    {{/foreach}}
+                                </div>
+                                <div class="tc-post-list-style2">
+                                    <div class="items">
+                                        {{#foreach posts from="2" to="3"}}
+
+                                            <a
+                                                href="{{url}}"
+                                                class="item d-block border-1 border-top border-bottom-0 brd-gray pt-15 mt-15 brd-gray"
+                                            >
+                                                <div
+                                                    class="row gx-3 align-items-center"
+                                                >
+
+                                                    <div class="col-4">
+                                                        <div
+                                                            class="img th-70 img-cover inner"
+                                                        >
+                                                            <img
+                                                                src="{{feature_image}}"
+                                                                alt=""
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <div class="content">
+                                                            <h5
+                                                                class="title ltspc--1 hover-underline"
+                                                            >
+                                                                {{title}}
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+
+                                        {{/foreach}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {{/get}}
+                </div>
+
+                <div class="col-lg-4 mb-5">
+                    {{#get "posts" filter="tag:fintech"}}
+                        <p class="color-000 text-uppercase mb-30 ltspc-1">
+                            <a href="/tag/fintech/">Fintech</a>
+                            <i class="la la-angle-right ms-1"></i>
+                        </p>
+                        <div class="row">
+                            <div class="col-12 brd-gray">
+                                <div class="tc-post-grid-default">
+                                    {{#foreach posts}}
+                                        {{#if @first}}
+                                            <div class="item">
+                                                <div
+                                                    class="img img-cover th-250 inner"
+                                                >
+                                                    <img
+                                                        src="{{feature_image}}"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <div class="content pt-20">
+
+                                                    <h4
+                                                        class="title ltspc--1 mb-10"
+                                                    >
+                                                        <a
+                                                            href="{{url}}"
+                                                            class="hover-underline"
+                                                        >
+                                                            {{title}}
+                                                        </a>
+                                                    </h4>
+                                                    <div class="text color-666">
+                                                        {{excerpt
+                                                            words="12"
+                                                        }}[...]
+                                                    </div>
+                                                    <div
+                                                        class="meta-bot lh-1 mt-20"
+                                                    >
+                                                        <ul class="d-flex">
+                                                            <li
+                                                                class="date me-5"
+                                                            >
+                                                                <a
+                                                                    href="{{url}}"
+                                                                ><i
+                                                                        class="la la-calendar me-2"
+                                                                    ></i>
+                                                                    <span
+                                                                        class="gh-article-meta mb-1"
+                                                                    >
+                                                                        <time
+                                                                            datetime="{{date
+                                                                                format="YYYY-MM-DD"
+                                                                            }}"
+                                                                        >
+                                                                            {{date
+                                                                                format="D MMM YYYY"
+                                                                            }}</time>
+                                                                        {{!-- <span
+                                                                            class="bull"
+                                                                        >&bull;</span>
+                                                                        {{reading_time}}
+                                                                    </span> --}}
+                                                                </a>
+                                                            </li>
+                                                            <li class="comment">
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {{/if}}
+                                    {{/foreach}}
+                                </div>
+                                <div class="tc-post-list-style2">
+                                    <div class="items">
+                                        {{#foreach posts from="2" to="3"}}
+
+                                            <a
+                                                href="{{url}}"
+                                                class="item d-block border-1 border-top border-bottom-0 brd-gray pt-15 mt-15 brd-gray"
+                                            >
+                                                <div
+                                                    class="row gx-3 align-items-center"
+                                                >
+
+                                                    <div class="col-4">
+                                                        <div
+                                                            class="img th-70 img-cover inner"
+                                                        >
+                                                            <img
+                                                                src="{{feature_image}}"
+                                                                alt=""
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <div class="content">
+                                                            <h5
+                                                                class="title ltspc--1 hover-underline"
+                                                            >
+                                                                {{title}}
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+
+                                        {{/foreach}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {{/get}}
+                </div>
+                <div class="col-lg-4 mb-5">
+                    {{#get "posts" filter="tag:healthcare"}}
+                        <p class="color-000 text-uppercase mb-30 ltspc-1">
+                            <a href="/tag/healthcare/">Healthcare</a>
+                            <i class="la la-angle-right ms-1"></i>
+                        </p>
+                        <div class="row">
+                            <div class="col-12 brd-gray">
+                                <div class="tc-post-grid-default">
+                                    {{#foreach posts}}
+                                        {{#if @first}}
+                                            <div class="item">
+                                                <div
+                                                    class="img img-cover th-250 inner"
+                                                >
+                                                    <img
+                                                        src="{{feature_image}}"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <div class="content pt-20">
+
+                                                    <h4
+                                                        class="title ltspc--1 mb-10"
+                                                    >
+                                                        <a
+                                                            href="{{url}}"
+                                                            class="hover-underline"
+                                                        >
+                                                            {{title}}
+                                                        </a>
+                                                    </h4>
+                                                    <div class="text color-666">
+                                                        {{excerpt
+                                                            words="12"
+                                                        }}[...]
+                                                    </div>
+                                                    <div
+                                                        class="meta-bot lh-1 mt-20"
+                                                    >
+                                                        <ul class="d-flex">
+                                                            <li
+                                                                class="date me-5"
+                                                            >
+                                                                <a
+                                                                    href="{{url}}"
+                                                                ><i
+                                                                        class="la la-calendar me-2"
+                                                                    ></i>
+                                                                    <span
+                                                                        class="gh-article-meta mb-1"
+                                                                    >
+                                                                        <time
+                                                                            datetime="{{date
+                                                                                format="YYYY-MM-DD"
+                                                                            }}"
+                                                                        >
+                                                                            {{date
+                                                                                format="D MMM YYYY"
+                                                                            }}</time>
+                                                                        {{!-- <span
+                                                                            class="bull"
+                                                                        >&bull;</span>
+                                                                        {{reading_time}}
+                                                                    </span> --}}
+                                                                </a>
+                                                            </li>
+                                                            <li class="comment">
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {{/if}}
+                                    {{/foreach}}
+                                </div>
+                                <div class="tc-post-list-style2">
+                                    <div class="items">
+                                        {{#foreach posts from="2" to="3"}}
+
+                                            <a
+                                                href="{{url}}"
+                                                class="item d-block border-1 border-top border-bottom-0 brd-gray pt-15 mt-15 brd-gray"
+                                            >
+                                                <div
+                                                    class="row gx-3 align-items-center"
+                                                >
+
+                                                    <div class="col-4">
+                                                        <div
+                                                            class="img th-70 img-cover inner"
+                                                        >
+                                                            <img
+                                                                src="{{feature_image}}"
+                                                                alt=""
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <div class="content">
+                                                            <h5
+                                                                class="title ltspc--1 hover-underline"
+                                                            >
+                                                                {{title}}
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+
+                                        {{/foreach}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {{/get}}
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

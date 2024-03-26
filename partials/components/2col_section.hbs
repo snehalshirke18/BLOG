@@ -1,0 +1,224 @@
+ {{#get "posts" filter="tag:techonology"}} 
+<section class="pt-50 pb-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9">
+                <!-- must-read -->
+                {{> "components/must_read"}}
+
+                <!-- AI in business -->
+                {{> "components/business"}}
+
+                 <!-- advertisement banner2 -->
+                <section class="banner2">
+                    <div class="container">
+                        <div class="content">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10">
+                                    <a href="#" class="d-block img-cover">
+                                        {{!-- <img src="assets/img/icons/digital-ai-journal-high-resolution-logo.png" alt=""> --}}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section> 
+                
+                <!-- Chatbot -->
+                {{> "components/chatbot"}}
+                
+            </div>
+
+            <div class="col-lg-3">
+                <div class="tc-side-widgets">
+                    <!-- widget-social -->
+                        {{!-- <p class="color-000 text-uppercase mb-30 ltspc-1 lh-2">
+                            stay connected
+                        </p>
+                        <div class="content">
+                            <a href="#" class="social-card">
+                                <div class="icon facebook-icon">
+                                    <i class="lab la-facebook-f"></i>
+                                </div>
+                                <h6>1,5M</h6>
+                            </a>
+                            <a href="#" class="social-card">
+                                <div class="icon twitter-icon">
+                                    <i class="lab la-twitter"></i>
+                                </div>
+                                <h6>920K</h6>
+                            </a>
+
+                            <a href="#" class="social-card">
+                                <div class="icon insta-icon">
+                                    <i class="lab la-instagram"></i>
+                                </div>
+                                <h6>25,7K</h6>
+                            </a>
+                            <a href="#" class="social-card mb-0">
+                                <div class="icon youtube-icon">
+                                    <i class="lab la-youtube"></i>
+                                </div>
+                                <h6>1,5M</h6>
+                            </a> --}}
+                            {{!-- <a href="#" class="social-card mb-0">
+                                <div class="icon spotify-icon">
+                                    <i class="lab la-spotify"></i>
+                                </div>
+                                <h6>1,5M</h6>
+                            </a> --}}
+                       
+                    <!-- widget-podcast -->
+                      {{#get "posts" filter="tag:podcast"}}
+                    <div class="tc-widget-podcast">
+                        <p class="color-000 text-uppercase mb-30 ltspc-1 lh-2">
+                            new podcasts 
+                            <i class="la la-angle-right ms-1"></i>
+                              
+                        </p>
+                          {{#foreach posts}}
+                             {{#if @first}}
+                        <div class="main-card">
+                            <div class="img img-cover inner">
+                                <img src="{{feature_image}}" alt="" />
+                            </div>
+                            <div class="info pt-10">
+                                <h5>
+                                    
+                                    <a href={{url}} class="title hover-underline">
+                                        {{title}}
+                                    </a>
+                                </h5>
+                            </div>
+                             
+
+
+                        </div>
+                         {{else}}
+                        <div cclass="podcast-list">
+                            <div class="item">
+                                <a href="{{url}}" class="img inner">
+                                    <img src="{{feature_image}}" alt="" />
+                                </a>
+                                <div class="info">
+                                    <h6 class="title ">
+                                        <a href="{{url}}" class="hover-underline">
+                                          {{title}}
+                                        </a>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                          {{/if}}
+                          {{/foreach}}
+                    </div>
+                     {{/get}}
+                    <!-- widget- sponsored -->
+                    <div class="tc-widget-sponsored-style1">
+                        <div class="img img-cover">
+                            <img src="assets/img/icons/2.jpg" alt="" />
+
+
+                        </div>
+                        <div class="info pt-10">
+                            <div class="spon-cat">  </div>
+                            <h6 class="title">
+                                <a href="#">
+                                Beyond Science Fiction: The Real-Life Impact of AI
+                                </a>
+                            </h6>
+                            <a href="https://en.wikipedia.org/wiki/Artificial_intelligence">
+                                <small>Artificial_intelligence
+                                    <i
+                                        class="las la-external-link-square-alt ms-2"
+                                    ></i></small>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- popular posts -->
+                      {{#get "posts" filter="tag:popular-posts"}}
+                    <div class="tc-widget-popular-style1">
+                        <p class="color-000 text-uppercase mb-20 ltspc-1">
+                                        <a href="/tag/popular-posts/"> popular posts </a>
+
+                            
+
+                            
+                        </p>
+                         {{#foreach posts}}
+                             {{#if @first}}
+                        <div class="main-card">
+                            <div class="img th-300 img-cover inner">
+                                <img
+                                    src="{{feature_image}}"
+                                    alt=""
+                                />
+                                <div class="tags">
+                                    <a href="#">business</a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h4 class="title hover-underline">
+                                    <a href="{{url}}" class="hover-underline">{{title}}</a>
+                                </h4>
+                                <div class="meta-bot">
+                                    <ul class="d-flex">
+                                        <li class="date me-4">
+                                             <a
+                                                                    href="{{url}}"
+                                                                ><i
+                                                                        class="la la-calendar me-2"
+                                                                    ></i>
+                                                                    <span
+                                                                        class="gh-article-meta mb-1"
+                                                                    >
+                                                                        <time
+                                                                            datetime="{{date
+                                                                                format="YYYY-MM-DD"
+                                                                            }}"
+                                                                        >
+                                                                            {{date
+                                                                                format="D MMM YYYY"
+                                                                            }}</time>
+                                                                        <span
+                                                                            class="bull"
+                                                                        >&bull;</span>
+                                                                        {{reading_time}}
+                                                                    </span>
+                                                                </a>
+                                        </li>
+                                        <li class="comment">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        {{else}}
+                        <div class="tc-widget-popular-list">
+                            <a
+                                href="{{url}}"
+                                class="item"
+                            >
+                                <div class="img img-cover inner">
+                                    <img
+                                        src="{{feature_image}}"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="info">
+                                    <h6 class="title hover-underline">
+                                      {{title}}
+                                    </h6>
+                                </div>
+                            </a>
+                        </div>
+                        {{/if}}
+                          {{/foreach}}
+                    </div>
+                     {{/get}}
+            </div>
+        </div>
+    </div>
+    
+</section>
+{{/get}}

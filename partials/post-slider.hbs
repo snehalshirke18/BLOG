@@ -1,0 +1,60 @@
+<div class="tc-trends-news-slider1 tc-slider-style2">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            {{#foreach posts from="1" to="8"}}
+                <div class="swiper-slide">
+                    <div class="tc-post-overlay-default">
+                        <div class="img th-650 img-cover inner">
+                            <img src="{{feature_image}}" alt="" />
+                            <div class="tags">
+                                <p class="gh-card-tag">{{tags
+                                        separator=" , "
+                                    }}</p>
+                            </div>
+                        </div>
+                        <div class="content ps-40 pe-40 pb-40">
+                            <h2 class="title mb-20 hover-main">
+                                <a href="{{url}}">{{title}}</a>
+                            </h2>
+                            {{#if excerpt}}
+                                <div class="text mb-40">
+                                    {{excerpt words="20"}}[...]
+                                </div>
+                            {{/if}}
+                            <div class="meta-bot lh-1">
+                                <ul class="d-flex">
+                                    <li class="date me-5">
+                                        <i class="la la-calendar me-2"></i>
+                                        <span class="gh-article-meta mb-1">
+                                            <time
+                                                datetime="{{date
+                                                    format="YYYY-MM-DD"
+                                                }}"
+                                            >
+                                                {{date
+                                                    format="D MMM YYYY"
+                                                }}</time>
+                                            {{!-- <span class="bull">&bull;</span>
+                                            {{reading_time}} --}}
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/foreach}}
+        </div>
+
+    </div>
+    <!-- arrows -->
+
+    <div class="swiper-button-next">
+
+    </div>
+    <div class="swiper-button-prev"></div>
+
+</div>
+
+{{! <li class="author me-5"><a href="#"><i class="la la-user me-2"></i>by Admin</a></li>
+<li class="comment"><a href="#"><i class="la la-comment me-2"></i>55 Comments</a></li> }}

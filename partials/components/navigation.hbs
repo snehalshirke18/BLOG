@@ -1,0 +1,259 @@
+<div class="navbar-container">
+    <div class="container">
+        <!-- ====== start top navbar ====== -->
+        <div class="top-navbar style-1">
+            <div class="container p-0">
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <div class="date-weather mb-3 mb-lg-0">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <div class="item">
+                                        <div class="icon me-3 pt-1">
+                                            <i class="la la-calendar"></i>
+                                        </div>
+                                        <div class="inf">
+                                            <strong>{{date
+                                                    format="dddd"
+                                                }}</strong>
+                                            <p>{{date
+                                                    format="MMMM D, YYYY"
+                                                }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="item">
+                                        <div class="icon me-3 pt-1">
+                                            <i class="la la-cloud-sun"></i>
+                                        </div>
+                                        <div class="inf">
+                                            <strong
+                                                id="weather-details"
+                                            ></strong>
+                                            <p id="city"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <a
+                            class="logo-brand d-none d-lg-block"
+                            href="{{@site.url}}"
+                        >
+                            {{!-- class="{{#unless @site.logo}} no-image{{/unless}}" href="{{@site.url}}"                            {{#if @site.logo}}
+                            <img src="{{@site.logo}}" alt="">
+                            {{else}}
+                            <strong class="fs-4 justify-center">{{@site.title}}</strong>
+                            {{/if}} --}}
+
+                            <img
+                                src="/assets/img/digital-ai-journal-high-resolution-logo .png"
+                                alt=" "
+                                class="dark-none"
+                            />
+                            <img
+                                src="/assets/img/digital-ai-journal-high-resolution-logo-white .png"
+                                alt=""
+                                class="light-none"
+                            />
+                            <div class="info">
+
+                                {{! <div class="foot-logo">
+                                    <img
+                                        src="assets/img/icons/digital-ai-journal-high-resolution-logo.png"
+                                        alt=""
+                                        class="dark-none"
+                                    />
+                                    <img
+                                        src="assets/img/icons/digital-ai-journal-high-resolution-logo-white.png"
+                                        alt=""
+                                        class="light-none"
+                                    />
+                                </div> }}
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="sub-darkLight">
+                            <div class="row text-end align-items-center">
+                                <div class="col-6">
+                                    {{#if @site.members_enabled}}
+                                        {{#if @member}}
+                                            <a href="#" class="icon-link">
+                                                <i class="la la-user fs-4"></i>
+                                                Account
+                                            </a>
+                                        {{else}}
+                                            <a
+                                                href="{{@site.signup_url}}"
+                                                class="text-uppercase fs-6 border-bottom border-1 border-dark subs"
+                                            >
+                                                <i
+                                                    class="la la-envelope fs-5 me-1"
+                                                ></i>
+                                                Subscribe
+                                            </a>
+                                        {{/if}}
+                                    {{/if}}
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="darkLight-btn">
+                                        <span
+                                            class="icon active"
+                                            id="light-icon"
+                                        >
+                                            <i class="la la-sun"></i>
+                                        </span>
+                                        <span class="icon" id="dark-icon">
+                                            <i class="la la-moon"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ====== end top navbar ====== -->
+
+        <!-- ====== start navbar ====== -->
+        <nav class="navbar navbar-expand-lg navbar-light style-1">
+            <div class="container p-0">
+                <div
+                    class="mob-nav-toggles d-flex align-items-center justify-content-between"
+                >
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                >
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="{{@site.url}}"
+                                id="navbarDropdown1"
+                                role="button"
+                                aria-expanded="false"
+                            >
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="ai-topics"
+                                id="navbarDropdown1"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="true"
+                            >
+                                AI Topics
+                            </a>
+                            <ul
+                                class="dropdownMenu"
+                                aria-labelledby="navbarDropdown1"
+                            >
+                                {{! <li><a
+                                        class="dropdown-item"
+                                        href="/tag/business/"
+                                    >AI in Business</a></li> }}
+                                <li><a
+                                        class="dropdown-item"
+                                        href="/tag/chatbot/"
+                                    >Chatbot</a></li>
+
+                                <li><a
+                                        class="dropdown-item"
+                                        href="/tag/mobile-app-development/"
+                                    >Mobile App Development</a></li>
+
+                                <li><a
+                                        class="dropdown-item"
+                                        href="/tag/web-app-development/"
+                                    > Web App Development</a></li>
+                                {{!-- {{> "components/tag"}} --}}
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="industry"
+                                id="navbarDropdown1"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Industry
+                            </a>
+                            <ul
+                                class="dropdownMenu"
+                                aria-labelledby="navbarDropdown1"
+                            >
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="/tag/healthcare/"
+                                    >Healthcare</a>
+                                </li>
+                                <li><a
+                                        class="dropdown-item"
+                                        href="/tag/fintech/"
+                                    >Fintech</a></li>
+                                {{! <li><a
+                                        class="dropdown-item"
+                                        href="retail"
+                                    >Retail</a></li> }}
+                                {{! <li><a
+                                        class="dropdown-item"
+                                        href="/tag/hospitality/"
+                                    >Hospitality</a></li> }}
+                                <li><a
+                                        class="dropdown-item"
+                                        href="/tag/automobile/"
+                                    >Automobile</a></li>
+                            </ul>
+
+                        </li>
+                        {{! <li class="nav-item">
+                            <a class="nav-link" href="team">
+                                Team
+                            </a>
+                        </li> }}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact-us/">
+                                contact
+                            </a>
+
+                        </li>
+
+                    </ul>
+                    <div class="nav-side">
+                        {{search}}
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+        <!-- ====== end navbar ====== -->
+    </div>
+</div>
+{{!-- {{> "components/footer"}} --}}

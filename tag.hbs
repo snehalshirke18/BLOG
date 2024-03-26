@@ -1,0 +1,1006 @@
+{{!< default}} 
+
+
+<!--======start nav search======-->
+<div class="p-100 pt-10 pb-10">
+    <div class="tc-blog-nav-search">
+        <div class="container">
+            <div class="row">
+                <div class="content">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="info">
+
+                            </div>
+                        </div>
+                    </div>
+                    {{!-- <div class="col-lg-5">
+                        <form class="search-form">
+                            {{search}}
+                        </form>
+
+
+
+
+
+                    </div> --}}
+                </div>
+            </div>
+        </div>
+        <!-- ====== end nav search ====== -->
+
+        <!--Contents-->
+        <main>
+
+            {{#if tag}}
+    {{!-- {{#get "posts" filter="tag:{{tag.slug}}" as |posts|}} --}}
+
+            <!-- ====== start features posts ====== -->
+            <section class="features-posts pt-10 pb-10  p-2">
+                  <h3 class=" text-uppercase">{{tag.slug}}</h3>
+              
+               
+            </section> 
+            {{!-- {{/get}} --}}
+            <!-- ====== end features posts ====== -->
+
+            <!-- ====== start popular posts ====== -->
+            <section class="tc-popular-posts-blog  p-3">
+                 {{!-- <div class="container"> --}}
+                    
+
+
+    {{#get "posts" filter="tag:{{tag.slug}}" as |posts|}}
+
+                {{!-- {{#get "posts" }} --}}
+
+
+                {{#foreach posts from="3" to="8" }}
+                {{#if @first}}
+
+
+
+                    <div class="content-widgets pt-50 pb-50  border-1">
+
+
+                        <div class="row ">
+                            <div class="col-lg-9">
+                                <div class="tc-post-list-style3">
+                                    <div class="items">
+
+                                        <div class="item">
+                                            <div class="row">
+                                                <div class="col-lg-5">
+                                                    <div class="img th-230 img-cover overflow-hidden">
+                                                        <img src="{{feature_image}}" alt="{{title}}" />
+
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-7">
+                                                    <div class="content mt-20 mt-lg-0">
+
+                                                        <h3><a href="{{url}}">{{title}}</a></h3>
+                                                        <p>{{excerpt}}</p>
+
+
+                                                        {{!-- <a href="{{url}}"
+                                                            class="color-999 fsz-13px text-uppercase mb-10">sport</a>
+                                                        --}}
+                                                        {{!-- <h4 class="title mb-15"> <a
+                                                                href="/home/ghostrun/Desktop/Ghost/content/themes/Blog--1-/partials/components/chatbot.hbs"></a>
+                                                        </h4> --}}
+                                                        <div class="text color-666">
+                                                        </div>
+                                                        <div class="meta-bot lh-1 mt-50">
+
+                                                            <ul class="d-flex">
+                                                                <li class="date me-4">
+
+                                                                    <i class="la la-calendar me-1"></i>
+                                                                    <span class="gh-article-meta mb-1">
+                                                                        <time datetime="{{date
+                                                            format=" YYYY-MM-DD" }}">
+                                                                            {{date
+                                                                            format="D MMM YYYY"
+                                                                            }}</time>
+                                                                        {{!-- <span class="bull">&bull;</span>
+                                                                        {{reading_time}}
+                                                                    </span> --}}
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                {{/if}}
+                {{/foreach}}
+
+                                        {{#foreach posts}}
+                                        {{#if @first}}
+
+
+
+                                        <div class="item">
+                                            <div class="row">
+                                                <div class="col-lg-5">
+                                                    <div class="img th-230 img-cover overflow-hidden">
+
+                                                        <img src="{{feature_image}}" alt="{{title}}" />
+
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-7">
+                                                    <div class="content mt-20 mt-lg-0">
+                                                        <h3><a href="{{url}}">{{title}}</a></h3>
+                                                        <p>{{excerpt}}</p>
+
+
+                                                        {{!-- <h4 class="title mb-15"> <a
+                                                                href="/home/ghostrun/Desktop/Ghost/content/themes/Blog--1-/partials/components/chatbot.hbs"></a>
+                                                        </h4> --}}
+                                                        <div class="text color-666">
+
+                                                        </div>
+                                                        <div class="meta-bot fsz-13px color-666">
+                                                            <ul class="d-flex">
+                                                                <li class="date me-4">
+
+                                                                    <i class="la la-calendar me-1"></i>
+                                                                    <span class="gh-article-meta mb-1">
+                                                                        <time datetime="{{date
+                                                            format=" YYYY-MM-DD" }}">
+                                                                            {{date
+                                                                            format="D MMM YYYY"
+                                                                            }}</time>
+                                                                        {{!-- <span class="bull">&bull;</span>
+                                                                        {{reading_time}}
+                                                                    </span> --}}
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {{/if}}
+
+                                {{/foreach}}
+
+                            {{#get "posts" filter="tag: fintech"}}
+
+                                {{#foreach posts}}
+                                {{#if @first}}
+
+                                <div class="tc-post-grid-default pb-40">
+                                    <div class="item pt-30">
+                                        <div class="img img-cover th-575">
+                                            <img src="{{feature_image}}" alt="{{title}}"    >
+                                        </div>
+                                {{/if}}
+
+                                {{/foreach}}
+                            {{/get}}
+
+                                {{#foreach posts from="5" to="10" }}
+                                {{#if @first}}
+
+
+                                        <div class="content pt-30">
+                                            <a href="" class="news-cat color-999 fsz-13px text-uppercase mb-10"></a>
+                                            <h2 class="title mb-20">
+                                                <h3><a href="{{url}}">{{title}}</a></h3>
+
+                                                {{!-- <h4 class="title mb-15"> <a
+                                                        href="/home/ghostrun/Desktop/Ghost/content/themes/Blog--1-/partials/components/chatbot.hbs"></a>
+                                                </h4> --}}
+                                                </a>
+                                                </a>
+                                            </h2>
+                                            <div class="text color-666">
+
+                                            </div>
+
+                                {{/if}}
+
+                                {{/foreach}}
+
+                                            <div class="meta-bot lh-1 mt-40">
+                                                <ul class="d-flex">
+                                                    <li class="date me-4">
+
+                                                        <i class="la la-calendar me-1"></i>
+                                                        <span class="gh-article-meta mb-1">
+                                                            <time datetime="{{date
+                                                            format=" YYYY-MM-DD" }}">
+                                                                {{date
+                                                                format="D MMM YYYY"
+                                                                }}</time>
+                                                            {{!-- <span class="bull">&bull;</span>
+                                                            {{reading_time}}
+                                                        </span> --}}
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- ====== start banner20 ====== -->
+                                {{!-- {{#get "posts" filter="tag:automobile"}} --}}
+   {{!-- {{#foreach posts from="5" to="5" }} --}}
+                                {{!-- {{#if @first}}
+                                <div class="banner20 border-1 border-top border-bottom brd-gray pt-40 pb-40">
+                                    <div class="content">
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-10"> 
+                                                <a href="#" class="d-block img-cover">
+                                                     <img
+                                                                {{!-- src="{{feature_image}}" alt="h" --}}
+                                                            {{!-- /></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{/if}} --}}
+                                {{!-- {{/foreach}}
+                                {{/get}} --}} 
+
+
+ <div class="item">
+         {{#get "posts" filter="tag:ad1"}} 
+          {{#foreach posts from="6" to="6" }}
+
+
+        <div class="img img-cover th-200">
+            <img src="{{feature_image}}" alt="" />
+        </div>
+        <div class="content py-4 px-3 bg-gray2">
+            <p class="color-main fsz-13px text-uppercase mb-1">Future Minds AI: Innovations Unleashed</p>
+            <h4 class="title ltspc--1">
+                <a href=""></a>
+            </h4>
+           
+        </div>
+        {{/foreach}}
+        {{/get}}
+    </div>
+
+
+                                {{#foreach posts from="5" to="10" }}
+                                {{#if @first}}
+
+
+                                <div class="tc-post-list-style3">
+                                    <div class="items">
+                                        <div class="item mt-30">
+                                            <div class="row">
+                                                <div class="col-lg-5">
+                                                    <div class="img th-230 img-cover overflow-hidden">
+                                                        <img src="{{feature_image}}" alt="{{title}}" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-7">
+                                                    <div class="content mt-20 mt-lg-0">
+                                                       
+                                                        <h3><a href="{{url}}">{{title}}</a></h3>
+                                                        <p>{{excerpt}}</p>
+
+
+
+                                                        <div class="meta-bot fsz-13px color-666">
+                                                            <ul class="d-flex">
+                                                                <li class="date me-5">
+                                                                    <a
+                                                                        href="/home/ghostrun/Desktop/Ghost/content/themes/Blog--1-/post.hbs"><i
+                                                                            class="la la-calendar me-2"></i> 
+                                                                    </a>
+                                                                    <time datetime="{{date
+                                                                    format=" YYYY-MM-DD" }}">
+                                                                        {{date
+                                                                        format="D MMM YYYY"
+                                                                        }}</time>
+
+                                                                </li>
+
+                                                                {{!-- <li class="comment">
+                                                                    <a href="#"><i class="la la-comment me-2"></i> </a>
+                                                                </li> --}}
+
+
+
+                                                                
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                {{/if}}
+
+                                {{/foreach}}
+
+
+
+                                        <div class="item mt-30 p-30 bg-gray1 border-bottom-0">
+                                            <div class="row">
+                                               
+                                                <div class="col-lg-7">
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    {{#foreach posts from="6" to="10" }}
+                                    {{#if @first}}
+
+
+
+                                        <div class="item mt-30 border-top">
+                                            <div class="row">
+                                                <div class="col-lg-5">
+                                                    <div class="img th-230 img-cover overflow-hidden">
+                                                        <img src="{{feature_image}}" alt="{{title}}" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-7">
+                                                    <div class="content mt-20 mt-lg-0">
+                                                    
+                                                        <h3><a href="{{url}}">{{title}}</a></h3>
+                                                        <p>{{excerpt}}</p>
+
+                                                        <div class="text color-666 mt-20">
+
+                                                        </div>
+
+                                                        <div class="meta-bot fsz-13px color-666">
+                                                            <ul class="d-flex">
+                                                                <li class="date me-5">
+                                                                    <a
+                                                                        href="/home/ghostrun/Desktop/Ghost/content/themes/Blog--1-/post.hbs"><i
+                                                                            class="la la-calendar me-2"></i> </a>
+                                                                    <time datetime="{{date
+                                                            format=" YYYY-MM-DD" }}">
+                                                                        {{date
+                                                                        format="D MMM YYYY"
+                                                                        }}</time>
+
+                                                                </li>
+
+                                                                {{!-- <li class="comment">
+                                                                    <a href="#"><i class="la la-comment me-2"></i> </a>
+                                                                </li> --}}
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    {{/if}}
+
+                                    {{/foreach}}
+
+
+                                    {{#foreach posts from="7" to="10" }}
+                                    {{#if @first}}
+
+
+
+                                        <div class="item mt-30 border-top">
+                                            <div class="row">
+                                                <div class="col-lg-5">
+                                                    <div class="img th-230 img-cover overflow-hidden">
+                                                        <img src="{{feature_image}}" alt="{{title}}" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-7">
+                                                    <div class="content mt-20 mt-lg-0">
+                                                       
+                                                        <h3><a href="{{url}}">{{title}}</a></h3>
+                                                        <p>{{excerpt}}</p>
+
+                                                        <div class="text color-666 mt-20">
+
+                                                        </div>
+
+                                                        <div class="meta-bot fsz-13px color-666">
+                                                            <ul class="d-flex">
+                                                                <li class="date me-5">
+                                                                    <a
+                                                                        href="/home/ghostrun/Desktop/Ghost/content/themes/Blog--1-/post.hbs"><i
+                                                                            class="la la-calendar me-2"></i> </a>
+                                                                    <time datetime="{{date
+                                                            format=" YYYY-MM-DD" }}">
+                                                                        {{date
+                                                                        format="D MMM YYYY"
+                                                                        }}</time>
+
+                                                                </li>
+
+                                                                {{!-- <li class="comment">
+                                                                    <a href="#"><i class="la la-comment me-2"></i> </a>
+                                                                </li> --}}
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    {{/if}}
+
+                                    {{/foreach}}
+
+
+
+                                    {{#foreach posts from="2" to="10" }}
+                                    {{#if @first}}
+
+
+
+                                        <div class="item mt-30 border-top">
+                                            <div class="row">
+                                                <div class="col-lg-5">
+                                                    <div class="img th-230 img-cover overflow-hidden">
+                                                        <img src="{{feature_image}}" alt="{{title}}" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-7">
+                                                    <div class="content mt-20 mt-lg-0">
+                                                        {{!-- <a href="#"
+                                                            class="color-999 fsz-13px text-uppercase mb-10">CHATBOT</a>
+                                                        --}}
+
+                                                        <h3><a href="{{url}}">{{title}}</a></h3>
+                                                        <p>{{excerpt}}</p>
+
+                                                        </a>
+
+
+                                                        <div class="text color-666 mt-20">
+
+                                                        </div>
+
+                                                        <div class="meta-bot fsz-13px color-666">
+                                                            <ul class="d-flex">
+                                                                <li class="date me-5">
+                                                                    <a
+                                                                        href="/home/ghostrun/Desktop/Ghost/content/themes/Blog--1-/post.hbs"><i
+                                                                            class="la la-calendar me-2"></i> </a>
+                                                                    <time datetime="{{date
+                                                            format=" YYYY-MM-DD" }}">
+                                                                        {{date
+                                                                        format="D MMM YYYY"
+                                                                        }}</time>
+
+                                                                </li>
+
+                                                                {{!-- <li class="comment">
+                                                                    <a href="#"><i class="la la-comment me-2"></i> </a>
+                                                                </li> --}}
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    {{/if}}
+
+                                    {{/foreach}}
+
+
+                                     {{#foreach posts from="6" to="10" }}
+                                    {{#if @first}}
+
+
+
+                                        <div class="item mt-30 border-top">
+                                            <div class="row">
+                                                <div class="col-lg-5">
+                                                    <div class="img th-230 img-cover overflow-hidden">
+                                                        <img src="{{feature_image}}" alt="{{title}}" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-7">
+                                                    <div class="content mt-20 mt-lg-0">
+                                                        {{!-- <a href="#"
+                                                            class="color-999 fsz-13px text-uppercase mb-10">CHATBOT</a>
+                                                        --}}
+
+                                                        <h3><a href="{{url}}">{{title}}</a></h3>
+                                                        <p>{{excerpt}}</p>
+
+                                                        </a>
+
+
+                                                        <div class="text color-666 mt-20">
+
+                                                        </div>
+
+                                                        <div class="meta-bot fsz-13px color-666">
+                                                            <ul class="d-flex">
+                                                                <li class="date me-5">
+                                                                    <a
+                                                                        href="/home/ghostrun/Desktop/Ghost/content/themes/Blog--1-/post.hbs"><i
+                                                                            class="la la-calendar me-2"></i> </a>
+                                                                    <time datetime="{{date
+                                                            format=" YYYY-MM-DD" }}">
+                                                                        {{date
+                                                                        format="D MMM YYYY"
+                                                                        }}</time>
+
+                                                                </li>
+
+                                                                {{!-- <li class="comment">
+                                                                    <a href="#"><i class="la la-comment me-2"></i> </a>
+                                                                </li> --}}
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    {{/if}}
+
+                                    {{/foreach}}
+
+
+
+
+
+
+
+
+ {{#foreach posts from="5" to="10" }}
+                                    {{#if @first}}
+
+
+
+                                        <div class="item mt-30 border-top">
+                                            <div class="row">
+                                                <div class="col-lg-5">
+                                                    <div class="img th-230 img-cover overflow-hidden">
+                                                        <img src="{{feature_image}}" alt="{{title}}" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-7">
+                                                    <div class="content mt-20 mt-lg-0">
+                                                        {{!-- <a href="#"
+                                                            class="color-999 fsz-13px text-uppercase mb-10">CHATBOT</a>
+                                                        --}}
+
+                                                        <h3><a href="{{url}}">{{title}}</a></h3>
+                                                        <p>{{excerpt}}</p>
+
+                                                        </a>
+
+
+                                                        <div class="text color-666 mt-20">
+
+                                                        </div>
+
+                                                        <div class="meta-bot fsz-13px color-666">
+                                                            <ul class="d-flex">
+                                                                <li class="date me-5">
+                                                                    <a
+                                                                        href="/home/ghostrun/Desktop/Ghost/content/themes/Blog--1-/post.hbs"><i
+                                                                            class="la la-calendar me-2"></i> </a>
+                                                                    <time datetime="{{date
+                                                            format=" YYYY-MM-DD" }}">
+                                                                        {{date
+                                                                        format="D MMM YYYY"
+                                                                        }}</time>
+
+                                                                </li>
+
+                                                                {{!-- <li class="comment">
+                                                                    <a href="#"><i class="la la-comment me-2"></i> </a>
+                                                                </li> --}}
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    {{/if}}
+
+                                    {{/foreach}}
+ {{#foreach posts from="4" to="10" }}
+                                    {{#if @first}}
+
+
+
+                                        <div class="item mt-30 border-top">
+                                            <div class="row">
+                                                <div class="col-lg-5">
+                                                    <div class="img th-230 img-cover overflow-hidden">
+                                                        <img src="{{feature_image}}" alt="{{title}}" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-7">
+                                                    <div class="content mt-20 mt-lg-0">
+                                                        {{!-- <a href="#"
+                                                            class="color-999 fsz-13px text-uppercase mb-10">CHATBOT</a>
+                                                        --}}
+
+                                                        <h3><a href="{{url}}">{{title}}</a></h3>
+                                                        <p>{{excerpt}}</p>
+
+                                                        </a>
+
+
+                                                        <div class="text color-666 mt-20">
+
+                                                        </div>
+
+                                                        <div class="meta-bot fsz-13px color-666">
+                                                            <ul class="d-flex">
+                                                                <li class="date me-5">
+                                                                    <a
+                                                                        href="/home/ghostrun/Desktop/Ghost/content/themes/Blog--1-/post.hbs"><i
+                                                                            class="la la-calendar me-2"></i> </a>
+                                                                    <time datetime="{{date
+                                                            format=" YYYY-MM-DD" }}">
+                                                                        {{date
+                                                                        format="D MMM YYYY"
+                                                                        }}</time>
+
+                                                                </li>
+
+                                                                {{!-- <li class="comment">
+                                                                    <a href="#"><i class="la la-comment me-2"></i> </a>
+                                                                </li> --}}
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    {{/if}}
+
+                                    {{/foreach}}
+
+
+                                    </div>
+                                </div>
+
+                                {{!-- <div class="pagination style-1 color-main justify-content-center mt-60">
+                                    
+                                <a href="{{url}}" class="active">
+                                    <span>1</span>
+                                </a>
+                                <a href="#">
+                                    <span>2</span>
+                                </a>
+                                <a href="#">
+                                    <span>3</span>
+                                </a>
+                                <a href="#">
+                                    <span>4</span>
+                                </a>
+                                <a href="#">
+                                    <span>...</span>
+                                </a>
+                                <a href="#">
+                                    <span>20</span>
+                                </a>
+                                <a href="#">
+                                    <span class="text text-uppercase">next <i class="la la-angle-right"></i> </span>
+                                </a>
+                            </div> --}}
+
+
+{{!-- <div class="pagination style-1 color-main justify-content-center mt-60">
+    
+    <a href="{{prevPage}}" class="{{#if prevPage}}active{{/if}}">
+        <span class="p-20">Previous</span>
+    </a>
+    <a href="{{nextPage}}" class="{{#if nextPage}}active{{/if}}">
+        <span class="p-20">Next</span>
+    </a>
+</div> --}}
+
+<div class="pagination style-1 color-main justify-content-center mt-60">
+
+
+
+
+
+
+    
+</div>
+
+
+
+
+
+                            </div>
+
+
+                            
+                            <div class="col-lg-3">
+                                <div class="widgets-sticky mt-5 mt-lg-0">
+                                    <p class="color-000 text-uppercase mb-30"> Stay Connected </p>
+                                    <!-- widget-social -->
+                                    <div class="tc-widget-social-style5 mb-40">
+                                        <a href="#" class="social-card">
+                                            <div class="icon facebook-icon">
+                                                <i class="lab la-facebook-f"></i>
+                                            </div>
+                                            <div class="cont">
+                                                <strong> <b class="counter">575,5</b>K</strong>
+                                                <span>Followers</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="social-card">
+                                            <div class="icon twitter-icon">
+                                                <i class="lab la-twitter"></i>
+                                            </div>
+                                            <div class="cont">
+                                                <strong> <b class="counter">215,5</b>K</strong>
+                                                <span>Followers</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="social-card">
+                                            <div class="icon insta-icon">
+                                                <i class="lab la-instagram"></i>
+                                            </div>
+                                            <div class="cont">
+                                                <strong> <b class="counter">98,5</b>K</strong>
+                                                <span>Followers</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="social-card border-0 pb-0">
+                                            <div class="icon youtube-icon">
+                                                <i class="lab la-youtube"></i>
+                                            </div>
+                                            <div class="cont">
+                                                <strong> <b class="counter">24,2</b>K</strong>
+                                                <span>Subscriber</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    {{#get "posts" filter="tag:trending-ai-tags"}}
+
+                                    {{#foreach posts limit="1"}}
+
+                                    <!-- widget-trends -->
+                                    <div class="tc-trending-news-style5 border border-1 brd-gray mb-40">
+                                        <p class="color-000 text-uppercase p-15">trending posts</p>
+                                        <div class="tc-post-list-style1">
+                                            <div class="tc-post-overlay-default mb-50">
+                                                <div class="img th-230 img-cover">
+                                                    <img src="{{feature_image}}"alt="{{title}}"/>
+                                                </div>
+                                                <div class="content  ps-10 pe-1 pb-1 text-white hover-main">
+                                                    <a href="#" class="text-uppercase fsz-13px mb-1"></a>
+                                                    <h3><a href="{{url}}">{{title}}</a></h3>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="items px-4 py-2">
+                                                {{#foreach posts from="3" to="3" }}
+                                            {{#if @first}}
+                                                <div class="item">
+                                                    <h2 class="num">
+                                                        2
+                                                    </h2>
+                                                    <div class="content">
+                                                        <h6 class="title fsz-16px fw-bold ltspc--1 hover-main"><a
+                                                                href="{{url}}">{{title}}</a></h6>
+
+                                                    </div>
+                                                </div>
+                                                {{/if}}
+                                                {{/foreach}}
+                                                
+                                                 {{#foreach posts from="4" to="4" }}
+                                            {{#if @first}}
+                                                <div class="item">
+                                                    <h2 class="num">
+                                                        3
+                                                    </h2>
+                                                    <div class="content">
+                                                        <h6 class="title fsz-16px fw-bold ltspc--1 hover-main"><a
+                                                                href="{{url}}">{{title}}</a></h6>
+
+                                                    </div>
+                                                </div>
+                                                {{/if}}
+                                                {{/foreach}}
+
+                                                  {{#foreach posts from="1" to="5" }}
+                                            {{#if @first}}
+                                                <div class="item">
+                                                    <h2 class="num">
+                                                        4
+                                                    </h2>
+                                                    <div class="content">
+                                                        <h6 class="title fsz-16px fw-bold ltspc--1 hover-main"><a
+                                                                href="{{url}}">{{title}}</a></h6>
+
+                                                    </div>
+                                                </div>
+                                                 {{/if}}
+                                                {{/foreach}}
+                                                <a href="{{url}}" class="fsz-13px text-capitalize color-666 mt-30 mb-20">
+                                                    <span>See all posts</span>
+                                                    <i class="las la-angle-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{/foreach}}
+                                    {{/get}}
+                                    <!-- widget-sponsored -->
+                                   
+
+                                    <!-- widget tags -->
+                                    
+                                    <!-- end widget tags -->
+
+                                    <!-- widget-adbox -->
+                                   
+
+                                    <!-- widget-survey -->
+                                    <div class="tc-widget-survey-style1 mb-40">
+                                        <p class="color-000 text-uppercase mb-20 ltspc-1"> quick survey </p>
+                                        <div class="ques-title lh-4">
+                                            How was your experience?
+                                        </div>
+                                        <div class="ansr-content">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="quesCheck"
+                                                    id="quesCheck1">
+                                                <label class="form-check-label" for="quesCheck1">
+                                                    Awesome, I’m satisfied!
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="quesCheck"
+                                                    id="quesCheck2">
+                                                <label class="form-check-label" for="quesCheck2">
+                                                    Normal
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="quesCheck"
+                                                    id="quesCheck3">
+                                                <label class="form-check-label" for="quesCheck3">
+                                                    Bad! Need improve more
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="btns">
+                                            <a href="#" class="btn active me-2">
+                                                Submit
+                                            </a>
+                                            <a href="#" class="btn">
+                                                Result
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+
+                                    <!-- widget webStories -->
+
+                                {{#get "posts" filter="tag:google-web-stories"}}
+
+
+
+
+                                    <div class="tc-widget-webStories-style5">
+                                        <p class="color-000 text-uppercase mb-30"> google web stories </p>
+                                        <div class="web-content">
+                                            <a href="https://www.youtube.com/watch?v=XqcjZVQ0hrs"
+                                                class="story-card pt-0" data-fancybox="">
+
+                                            {{#foreach posts from="3" to="10" }}
+                                            {{#if @first}}
+                                                <div class="img img-cover">
+                                                    <img src="{{feature_image}}" alt="{{title}}" />
+                                                </div>
+                                                <div class="cont">
+                                                    <h6>{{title}}</h6>
+                                                </div>
+                                            </a>
+
+                                            {{/if}}
+
+                                            {{/foreach}}
+
+
+                                            <a href="https://www.youtube.com/watch?v=o15HCWX1gUo"
+                                                class="story-card seen" data-fancybox="">
+                                            {{#foreach posts from="2" to="10" }}
+                                            {{#if @first}}
+                                                <div class="img img-cover">
+                                                    <img src="{{feature_image}}" alt="" />
+                                                </div>
+                                                <div class="cont">
+                                                    <h6>{{title}}</h6>
+                                                </div>
+                                            </a>
+
+                                            {{/if}}
+
+                                            {{/foreach}}
+
+                                            <a href="https://www.youtube.com/watch?v=5CxZbKr4ifI"
+                                                class="story-card pb-0 border-0" data-fancybox="">
+
+                                            {{#foreach posts from="1" }}
+                                            {{#if @first}}
+                                                <div class="img img-cover">
+                                                    <img src="{{feature_image}}" alt="{{title}}" />
+                                                </div>
+                                                <div class="cont">
+                                                    <h6>{{title}}</h6>
+                                                </div>
+                                            </a>
+                                            {{/if}}
+
+                                            {{/foreach}}
+                                        </div>
+                                    </div>
+                                {{/get}}
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{!-- </div> --}}
+                
+            </section>
+            <!-- ====== end popular posts ====== -->
+
+
+                {{/get}}
+
+            <!-- ====== start modals ====== -->
+
+              <div
+        class="offcanvas offcanvas-start sidebar-popup-style1"
+        tabindex="-1"
+        id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel"
+      >
+        <div class="offcanvas-header">
+          <div class="logo">
+            <img src="assets/img/logo_home1.png" alt="" class="dark-none" />
+            <img src="assets/img/logo_home1_lt.png" alt="" class="light-none" />
+          </div>
+          <button
+            type="button"
+            class="btn-close text-reset"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+          </div>
+        </div>
+      </div>
+            <!-- ====== end modals ====== -->
+
+            {{/if}}
+        </main>
+        <!--End-Contents-->
+    </div>
+</div>
